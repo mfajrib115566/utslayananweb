@@ -33,6 +33,9 @@ Route::get('/v1/sholat/kota/semua', [\App\Http\Controllers\WrapperApiController:
 Route::get('/v1/sholat/jadwal/1609/2021/06/23', [\App\Http\Controllers\WrapperApiController::class, 'jadwalhari'])
     ->middleware(\App\Http\Middleware\NpmMiddleware::class)
     ->name('jadwalhari');
+Route::get('/v1/sholat/jadwal/1609/2021/04', [\App\Http\Controllers\WrapperApiController::class, 'jadwalbulan'])
+    ->middleware(\App\Http\Middleware\NpmMiddleware::class)
+    ->name('jadwalbulan');
 
 Route::get('user/identitas', function () {
     return [

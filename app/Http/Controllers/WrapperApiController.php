@@ -36,4 +36,10 @@ class WrapperApiController extends Controller
         $json = Http::get('https://api.myquran.com/v1/sholat/jadwal/1609/2021/06/23')->json();
         return response()->json($json);
     }
+
+    public function jadwalbulan()
+    {
+        $json = Http::get('https://api.myquran.com/v1/sholat/jadwal/1609/2021/04')->json();
+        return response()->json($json);
+    }
 }
